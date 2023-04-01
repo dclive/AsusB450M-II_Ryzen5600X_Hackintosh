@@ -70,7 +70,7 @@ Technically, you are now done. You should be able to boot MacOS using the USB st
 - Download OCAT https://github.com/ic005k/QtOpenCoreConfig and open it. Read the tooltips showing what all the icons at the top do. Update to the latest OCAT version by finding the update button and updating. Don't continue until you've done this. Run the latest OCAT version. As of last edit, OC90 is current and fully working. Over the course of time further updates will be required. Become familiar with how to pull the latest OCxx release and KEXT updates from within OCAT 'into' your EFI configuration; you will do this a lot.
 - Open your USB stick's config.plist by using OCAT's OPEN icon.
 - In OCAT, notice the row of icons on the left side. Go to "PI" on the row.
-- Let's generate a new serial. Ensure, under the GENERIC tab, that for "SystemProductName" you have the MacPro7,1. Then click GENERATE right next to the MacPro7,1 box. Your serial numbers are now set up.
+- Let's generate a new serial. Ensure, under the GENERIC tab, that for "SystemProductName" you have the iMacPro1,1. Then click GENERATE right next to the iMacPro1,1 box. Your serial numbers are now set up.
 - Note you can also use the GenSMBIOS command to do all this too (https://github.com/corpnewt/GenSMBIOS)
 
 Now let's fix your MAC address (ROM)
@@ -94,7 +94,10 @@ Now let's fix your MAC address (ROM)
 
 **Benchmark Expectations**
 
-- Running 13.3 with BIOS 4002 and a Ryzen 5600X, and using PC3000 RAM, I get GeekBench 6.01 scores of 1931/8182 (single/multi-core) and 22074/2986 Passmark CPU Mark/Memory Mark) scores, using Passmark Command Line from the Passmark website, https://www.passmark.com/baselines/V10/display.php?id=503574314722. A typical M2 base $499 mini is (Geekbench) 2656/9858, so the base 5600X is about 73% of the M2's speed per core, and about 83% of the M2 (mini) speed with all cores compared.  
+- Running 13.3 with BIOS 4002 and a Ryzen 5600X, and using PC3000 RAM, I get GeekBench 6.01 scores of 1931/8182 (single/multi-core) and 22074/2986 Passmark CPU Mark/Memory Mark) scores, using Passmark Command Line from the Passmark website, https://www.passmark.com/baselines/V10/display.php?id=503574314722. 
+- A typical M2 base $499 mini is (Geekbench) 2656/9858, so the base 5600X is about 73% of the M2's speed per core, and about 83% of the M2 (mini) speed with all cores compared.
+- A typical M2 base $499 mini is (Passmark) 15356 Passmark CPUMark, suggesting the 5600X is about 43% **faster** than the M2 with all cores.
+- I can't immediately explain the discrepancy.  Passmark likes Intel, Geekbench likes M2, perhaps.  
 
 **Addendum: OC90+**
 
