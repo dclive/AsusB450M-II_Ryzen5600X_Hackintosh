@@ -32,7 +32,7 @@ Most content was sourced from a variety of internet sources, coupled with the Do
 - 1TB NVME [HP EX920]
 - Generic EVGA 550W PSU
 - Phanteks Enthoo Evolv MATX Tempered Glass Case.
-- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  The RealTek built-in stuff will not work in MacOS; you'd need to remove it and replace with Broadcom (best, easiest) or modern Intel (probably cheapest for most people).  I strongly suggest Broadcom.
+- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom.
 
 **Working**
 
