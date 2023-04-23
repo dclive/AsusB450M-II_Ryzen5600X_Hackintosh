@@ -1,6 +1,6 @@
 # AsusB450M-II_Ryzen5600X_Hackintosh
 
-***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC90, MacOS13.3\****
+***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC90, MacOS13.3.1\****
 
 *MAJOR CHANGES: *
 
@@ -8,7 +8,7 @@ First Release - no major changes.  BIOS 4002 (2023/03/21) is used.
 
 ![229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png (281×526)](https://user-images.githubusercontent.com/4536776/229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png)
 
-**Typical is Geekbench 6.01 scores of 1931 single and 8182 multi-core, usuing PC3000 RAM:
+**Typical is Geekbench 6.x scores of 1931 single and 8182 multi-core, usuing PC3000 RAM, and 3.5% higher MC with faster RAM.  
 
 PC3000 RAM:
 
@@ -107,4 +107,4 @@ Now let's fix your MAC address (ROM)
 
 **Addendum: OC90+**
 
-- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.
+- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.  OC91 as of 4/2023 is fully working, and takes moments to update via OCAT.  See my OCAT procedure for full details.
