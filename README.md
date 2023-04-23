@@ -8,7 +8,7 @@ First Release - no major changes.  BIOS 4002 (2023/03/21) is used.
 
 ![229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png (281×526)](https://user-images.githubusercontent.com/4536776/229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png)
 
-**Typical is Geekbench 6.x scores of 1931 single and 8182 multi-core, usuing PC3000 RAM, and 3.5% higher MC with faster RAM.  
+**Typical is Geekbench 6.x scores of 1931 single and 8182 multi-core, using PC3000 RAM, and 3.5% higher MC with faster RAM.  
 
 PC3000 RAM:
 
