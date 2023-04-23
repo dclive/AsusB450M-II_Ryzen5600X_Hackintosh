@@ -14,6 +14,12 @@ PC3000 RAM:
 
 ![img](https://user-images.githubusercontent.com/4536776/229231646-e6ccb3e0-7b5c-415f-8694-3262d7e9e9e2.png)
 
+PC3600 RAM: 
+
+![233856753-5652edd7-5bc1-470c-9019-c617b7c6c3e2](https://user-images.githubusercontent.com/4536776/233856753-5652edd7-5bc1-470c-9019-c617b7c6c3e2.jpg)
+
+
+
 **Credits**
 
 Most content was sourced from a variety of internet sources, coupled with the Dortania guide, plus https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#cleaning-up the AMD bits, and https://github.com/AMD-OSX/AMD_Vanilla for more AMD bits.  Note that the best AMD kernel patch I found was Shanee's, not Algrey's (see that second link...) - Algrey's gave me horrible GPU performance; Shanee's improved things, but at the cost of spotty audio (I survive...).  If you must have perfect audio, use something other than HDMI/DP audio.  
