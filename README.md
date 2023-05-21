@@ -1,6 +1,6 @@
 # AsusB450M-II_Ryzen5600X_Hackintosh
 
-***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC90, MacOS13.3.1\****
+***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC90, MacOS13.4\****
 
 *MAJOR CHANGES: *
 
@@ -26,24 +26,24 @@ Most content was sourced from a variety of internet sources, coupled with the Do
 
 **Tested macOS**
 
-- OC90+ and Ventura 13.3+ is the only focus of current testing.
+- OC90+ and Ventura 13.4+ is the only focus of current testing.
 
 **Hardware**
 
-- Asus Prime B450M-II  works well in MacOS Ventura 13.3. It's safe to update, and all testing will only include 4002 BIOS (or later) going forward. Flash to 4002. After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable above 4G Decoding.  
+- Asus Prime B450M-II  works well in MacOS Ventura 13.4. It's safe to update, and all testing will only include 4002 BIOS (or later) going forward. Flash to 4002 (https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b450m-a-ii/helpdesk_bios/?model2Name=PRIME-B450M-A-II). After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable above 4G Decoding.  
 - Ryzen 5600X [If you use another Ryzen chip with a different number of cores, changes are required]
 - An AMD GPU is required regardless of which Ryzen CPU you use, no exceptions; ADGPMOD=PIKERA is in place for allowing any of the newer supported GPUs without issue.  The AMD580 and AMD5700 are directly tested.
   - Most typical, RX470, RX480, RX570, RX580, RX590, Vega 56, Vega 64, RX 5700, RX6600, RX6600XT, RX6800, RX6800XT, RX6900XT will all work. Some other variants (some RX560, for example) will work also, but you should google for more details before buying. 
-- 16GB RAM PC3000 [2 x 8GB DIMMs]
+- 32GB RAM PC3600 [2 x 16GB DIMMs]
 - 1TB NVME [HP EX920]
 - Generic EVGA 550W PSU
 - Phanteks Enthoo Evolv MATX Tempered Glass Case.
-- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom.
+- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom/Fenvi.  You'll need to map that port, depending on where you plug in the wireless/BT adapter.
 
 **Working**
 
 - AMD GPU; AMD GPU audio via HDMI/DP works, but has issues.
-- Sleep / Wake works; mouse / keyboard wakes machine; no motherboard 'internal' USB2 headers are enabled; the internal USB3 header is used, only.
+- Sleep / Wake works; mouse / keyboard wakes machine; no motherboard 'internal' USB2 headers are enabled; the internal USB3 header is used, only.  I find I must press the power button on my case, and then the Mac immediately wakes (in about 1 second)
 - App Store, Time Machine [But to recover, keep track of your USB stick with your serials/MAC Address/etc. embedded in it!]
 - USB port mapping is complete and believed to work fine.
 
@@ -53,7 +53,7 @@ Most content was sourced from a variety of internet sources, coupled with the Do
 
 **Not Working**
 
-- Anything using wifi / BT won't work; anything based on Intel QuickSync won't work.  
+- Anything using wifi / BT won't work (unless you add the hardware and the USB mapping); anything based on Intel QuickSync won't work.  I find emulation, like Fusion, won't work, nor will common photo apps, like Topaz Photo AI and Topaz Video AI; they simply quit.
 
 **Next Steps - Required**
 
@@ -102,9 +102,8 @@ Now let's fix your MAC address (ROM)
 
 - Running 13.3 with BIOS 4002 and a Ryzen 5600X, and using PC3000 RAM, I get GeekBench 6.01 scores of 1931/8182 (single/multi-core) and 22074/2986 Passmark CPU Mark/Memory Mark) scores, using Passmark Command Line from the Passmark website, https://www.passmark.com/baselines/V10/display.php?id=503574314722. 
 - A typical M2 base $499 mini is (Geekbench) 2656/9858, so the base 5600X is about 73% of the M2's speed per core, and about 83% of the M2 (mini) speed with all cores compared.
-- A typical M2 base $499 mini is (Passmark) 15356 Passmark CPUMark, suggesting the 5600X is about 43% **faster** than the M2 with all cores.
-- I can't immediately explain the discrepancy.  Passmark likes Intel, Geekbench likes M2, perhaps.  
+- A typical M2 base $499 mini is (Passmark) 15356 Passmark CPUMark, suggesting the 5600X is about 43% **faster** than the M2 with all cores.  I can't immediately explain the discrepancy.  Passmark likes Intel, Geekbench likes M2, perhaps.  
 
 **Addendum: OC90+**
 
-- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.  OC91 as of 4/2023 is fully working, and takes moments to update via OCAT.  See my OCAT procedure for full details.
+- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.  OC92 as of 5/2023 is fully working, and takes moments to update via OCAT.  See my OCAT procedure for full details.  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT
