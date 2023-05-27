@@ -22,7 +22,9 @@ PC3600 RAM:
 
 **Credits**
 
-Most content was sourced from a variety of internet sources, coupled with the Dortania guide, plus https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#cleaning-up the AMD bits, and https://github.com/AMD-OSX/AMD_Vanilla for more AMD bits.  Note that the best AMD kernel patch I found was Shanee's, not Algrey's (see that second link...) - Algrey's gave me horrible GPU performance; Shanee's improved things, but at the cost of spotty audio (I survive...).  If you must have perfect audio, use something other than HDMI/DP audio.  
+Most content was sourced from a variety of internet sources, coupled with the Dortania guide, plus https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#cleaning-up the AMD bits, and https://github.com/AMD-OSX/AMD_Vanilla for more AMD bits.  Note that the best AMD kernel patch I found was Shanee's, not Algrey's (see that second link...) - Algrey's gave me horrible GPU performance; Shanee's improved things, but at the cost of spotty audio (I survive...), whether over USB, DP, HDMI, or whathaveyou.  
+
+If you must have perfect audio, Intel may be a better choice.  
 
 **Tested macOS**
 
@@ -42,18 +44,18 @@ Most content was sourced from a variety of internet sources, coupled with the Do
 
 **Working**
 
-- AMD GPU; AMD GPU audio via HDMI/DP works, but has issues.
+- AMD GPU; AMD GPU audio via HDMI/DP, or aftermarket USB works, but has issues.
 - Sleep / Wake works; mouse / keyboard wakes machine; no motherboard 'internal' USB2 headers are enabled; the internal USB3 header is used, only.  I find I must press the power button on my case, and then the Mac immediately wakes (in about 1 second)
 - App Store, Time Machine [But to recover, keep track of your USB stick with your serials/MAC Address/etc. embedded in it!]
 - USB port mapping is complete and believed to work fine.
 
 **Untested**
 
-- 3.5MM audio is untested.  It should work, but the scratchy DP audio is good enough for me.
+- 3.5MM audio is untested.
 
 **Not Working**
 
-- Anything using wifi / BT won't work (unless you add the hardware and the USB mapping); anything based on Intel QuickSync won't work.  I find emulation, like Fusion, won't work, nor will common photo apps, like Topaz Photo AI and Topaz Video AI; they simply quit.
+- Anything using wifi / BT won't work (unless you add the hardware and the USB mapping); anything based on Intel QuickSync won't work.  I find emulation, like Fusion, won't work, nor will common photo apps, like Topaz Photo AI and Topaz Video AI; they simply quit.  I suspect it's due to the AMD GPU, as these apps run fine on my Intel Hacks.  
 
 **Next Steps - Required**
 
