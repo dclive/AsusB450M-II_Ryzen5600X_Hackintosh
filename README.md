@@ -55,7 +55,7 @@ If you must have perfect audio, Intel may be a better choice.
 
 **Not Working**
 
-- Anything using wifi / BT won't work (unless you add the hardware and the USB mapping); anything based on Intel QuickSync won't work.  I find emulation, like Fusion, won't work, nor will common photo apps, like Topaz Photo AI and Topaz Video AI; they simply quit.  I suspect it's due to the AMD GPU, as these apps run fine on my Intel Hacks.  
+- Anything using wifi / BT won't work (unless you add the hardware and the USB mapping); anything based on Intel QuickSync won't work.  I find emulation, like Fusion, won't work, nor will common photo apps, like Topaz Photo AI and Topaz Video AI; they simply quit.  I suspect it's due to the AMD Ryzen CPU, as these apps run fine on my Intel CPU Hacks.  
 
 **Next Steps - Required**
 
