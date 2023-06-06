@@ -97,14 +97,13 @@ Now let's fix your MAC address (ROM)
 - Once setup is done, use EFIAgent or OCAT to copy the USB stick's EFI folder, with your serial number modifications, to the SSD's EPS (EFI) partition, and then you'll be able to boot from that disk (and you won't need the USB stick anymore, but keep it forever as a backup!). Do note: Until you've copied the EFI folder from your USB stick to your SSD's EPS (EFI) partition, you must continue to use DEL to boot into your USB stick before booting into MacOS. Once you've copied the USB stick's EFI folder to the EPS (EFI) partition on the SSD, then you'll no longer need to use the USB stick to boot, and you'll just boot from the SSD's EPS (EFI).
 - Versioning on this zipfile is OC90. Future versions, if required, would have higher numbers so it is easier to see what version you have. Keep the zipfile (name, at least) around so you know what version you have.
 - You can clean up logs and logging / bootup, if you wish, once you have everything sorted. Doritania's guide has a post-install cleanup section with good details on that. In the zip, logging is fully enabled, so that if there's a problem you can take a video of the screen on your phone and troubleshoot based on that.
-- Use OCAuxiliaryTools to update to later OpenCore releases. Use MacOS's built-in update mechanism to update MacOS releases.
+- **Use OCAuxiliaryTools to update to later OpenCore releases**. Use MacOS's built-in update mechanism to update MacOS releases.
 - Otherwise, please leave comments/issues here.
 
 **Benchmark Expectations**
 
-- Running 13.3 with BIOS 4002 and a Ryzen 5600X, and using PC3000 RAM, I get GeekBench 6.01 scores of 1931/8182 (single/multi-core) and 22074/2986 Passmark CPU Mark/Memory Mark) scores, using Passmark Command Line from the Passmark website, https://www.passmark.com/baselines/V10/display.php?id=503574314722. 
-- A typical M2 base $499 mini is (Geekbench) 2656/9858, so the base 5600X is about 73% of the M2's speed per core, and about 83% of the M2 (mini) speed with all cores compared.
-- A typical M2 base $499 mini is (Passmark) 15356 Passmark CPUMark, suggesting the 5600X is about 43% **faster** than the M2 with all cores.  I can't immediately explain the discrepancy.  Passmark likes Intel, Geekbench likes M2, perhaps.  
+- Running 13.4 with BIOS 4002 and a Ryzen 5600X, and using PC3600 RAM, I get GeekBench 6.03 scores of 1953/8473 (single/multi-core).
+- A typical M2 base $499 mini (https://browser.geekbench.com/macs/mac-mini-2023-8c-cpu) is (Geekbench) 2623/9671, so the base 5600X is about 74% of the M2's speed per core, and about 88% of the M2 (mini) speed with all cores working.
 
 **Addendum: OC90+**
 
