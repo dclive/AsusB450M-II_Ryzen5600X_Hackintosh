@@ -6,9 +6,9 @@
 
 First Release - no major changes.  BIOS 4002 (2023/03/21) is used.  
 
-Second Release - No EFI changes whatsoever (use OCAT to update; see guide here:  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT); the only updates at this time (1-October-2023) are due to BIOS 4204 dated Sept 4 2023, found here:  https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b450m-a-ii/helpdesk_bios/?model2Name=PRIME-B450M-A-II).  I suggest updating to this BIOS, and enabling PBO for a mild performance boost, shown below in the GeekBench section.
+Second Release - No EFI changes whatsoever (use OCAT to update to OC95 or later; see guide here:  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT); the only updates at this time (1-October-2023) are due to BIOS 4204 dated Sept 4 2023, found here:  https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b450m-a-ii/helpdesk_bios/?model2Name=PRIME-B450M-A-II).  I suggest updating to this BIOS, and enabling PBO for a mild performance boost, shown below in the GeekBench section.  OC95 is tested and working fine with 13.6.  Update your KEXTs using OCAT! 
 
-Sonoma MacOS 14 Statement:  This EFI / Setup seems to crash when I try to install Sonoma.  No further update at this time.
+Sonoma MacOS 14 Statement:  This EFI / Setup seems to crash when I try to install Sonoma; the first boot from the "MacOS Installer" boot image fails.  No further update at this time.
 
 ![229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png (281×526)](https://user-images.githubusercontent.com/4536776/229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png)
 
@@ -22,7 +22,7 @@ PC3600 RAM:
 
 ![233856753-5652edd7-5bc1-470c-9019-c617b7c6c3e2](https://user-images.githubusercontent.com/4536776/233856753-5652edd7-5bc1-470c-9019-c617b7c6c3e2.jpg)
 
-Same PC3600 RAM, but with 4204 Sept 4 2023 BIOS and PBO enabled: 
+Same PC3600 RAM, but with BIOS 4204 Sept 4 2023 BIOS and PBO enabled: 
 
 ![image](https://user-images.githubusercontent.com/4536776/271873967-53e24c32-e475-452e-88e0-4418e9ca315a.png)
 
@@ -34,7 +34,7 @@ If you must have perfect audio, Intel may be a better choice.
 
 **Tested macOS**
 
-- OC90+ and Ventura 13.6+ is the only focus of current testing.
+- OC95+ and Ventura 13.6+ is the only focus of current testing.  Sonoma MacOS 14.0 doesn't work at the moment for me.  
 
 **Hardware**
 
@@ -46,7 +46,7 @@ If you must have perfect audio, Intel may be a better choice.
 - 1TB NVME [HP EX920]
 - Generic EVGA 550W PSU
 - Phanteks Enthoo Evolv MATX Tempered Glass Case.
-- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom/Fenvi.  You'll need to map that port, depending on where you plug in the wireless/BT adapter.  Note with Sonoma you'll probably want to flip to Intel BT/Wifi.  Haven't tried with this motherboard / cannot provide support.
+- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom/Fenvi.  You'll need to map that (USB) port, depending on where you plug in the wireless/BT adapter.  Yes, this means even when the BT/Wifi module is on an M2 slot in the motherboard, it still uses a USB "port" of the 15 permitted.  
 
 **Working**
 
@@ -67,7 +67,7 @@ If you must have perfect audio, Intel may be a better choice.
 
 You will need to do the following:
 
-- Prepare a USB boot disk for MacOS 13.x installation. The easiest way is on a real Mac, although gibMacOS may work for you as well. To follow the much easier Real Mac path, read https://support.apple.com/en-us/HT201372 and follow the directions for MacOS, including the terminal command to write the download to the USB stick. You'll want to format the USB as HFS+ format, GUID. TINU also can make a bootable USB stick...
+- Prepare a USB boot disk for MacOS 13.x installation. The easiest way is on a real Mac, although gibMacOS may work for you as well. To follow the much easier Real Mac path, read https://support.apple.com/en-us/HT201372 and follow the directions for MacOS, including the terminal command to write the download to the USB stick. You'll want to format the USB as HFS+ format, GUID.  TINU also can make a bootable USB stick...
 - Download EFIAgent (https://github.com/headkaze/EFI-Agent) and mount the EFI (ESP) partition for the USB stick you just made. Using EFIAgent again, "open" the EFI partition so it shows on the Mac desktop. Note that EFI partitions are typically GRAY in color in EFIAgent. To find EFIAgent, locate the new icon in the upper right clock area that looks like a circular pie. [![Screen Shot 2021-09-25 at 7 22 44 PM](https://user-images.githubusercontent.com/4536776/134790066-27597b9e-a37f-47e0-87f5-d3ebbc2af59f.png)](https://user-images.githubusercontent.com/4536776/134790066-27597b9e-a37f-47e0-87f5-d3ebbc2af59f.png)
 
 > > Remember this process for any future EFI partitions you must mount; this is a common procedure.
@@ -103,7 +103,7 @@ Now let's fix your MAC address (ROM)
 - Once setup is done, use EFIAgent or OCAT to copy the USB stick's EFI folder, with your serial number modifications, to the SSD's EPS (EFI) partition, and then you'll be able to boot from that disk (and you won't need the USB stick anymore, but keep it forever as a backup!). Do note: Until you've copied the EFI folder from your USB stick to your SSD's EPS (EFI) partition, you must continue to use DEL to boot into your USB stick before booting into MacOS. Once you've copied the USB stick's EFI folder to the EPS (EFI) partition on the SSD, then you'll no longer need to use the USB stick to boot, and you'll just boot from the SSD's EPS (EFI).
 - Versioning on this zipfile is OC90. Future versions, if required, would have higher numbers so it is easier to see what version you have. Keep the zipfile (name, at least) around so you know what version you have.
 - You can clean up logs and logging / bootup, if you wish, once you have everything sorted. Doritania's guide has a post-install cleanup section with good details on that. In the zip, logging is fully enabled, so that if there's a problem you can take a video of the screen on your phone and troubleshoot based on that.
-- **Use OCAuxiliaryTools to update to later OpenCore releases**. Use MacOS's built-in update mechanism to update MacOS releases.
+- **Use OCAuxiliaryTools to update to later OpenCore releases**. Use MacOS's built-in update mechanism to update MacOS releases.  But note that for now, with this build, Sonoma MacOS 14 doesn't install for me.
 - Otherwise, please leave comments/issues here.
 
 **Benchmark Expectations**
