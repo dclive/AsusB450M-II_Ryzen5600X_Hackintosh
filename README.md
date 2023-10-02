@@ -6,6 +6,10 @@
 
 First Release - no major changes.  BIOS 4002 (2023/03/21) is used.  
 
+Second Release - No EFI changes whatsoever (use OCAT to update; see guide here:  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT); the only updates at this time (1-October-2023) are due to BIOS 4204 dated Sept 4 2023, found here:  https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b450m-a-ii/helpdesk_bios/?model2Name=PRIME-B450M-A-II).  I suggest updating to this BIOS, and enabling PBO for a mild performance boost, shown below in the GeekBench section.
+
+Sonoma MacOS 14 Statement:  This EFI / Setup seems to crash when I try to install Sonoma.  No further update at this time.
+
 ![229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png (281×526)](https://user-images.githubusercontent.com/4536776/229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png)
 
 **Typical is Geekbench 6.x scores of 1931 single and 8182 multi-core, using PC3000 RAM, and 3.5% higher MC with faster RAM.  
@@ -18,7 +22,9 @@ PC3600 RAM:
 
 ![233856753-5652edd7-5bc1-470c-9019-c617b7c6c3e2](https://user-images.githubusercontent.com/4536776/233856753-5652edd7-5bc1-470c-9019-c617b7c6c3e2.jpg)
 
+Same PC3600 RAM, but with 4204 Sept 4 2023 BIOS and PBO enabled: 
 
+![image](https://user-images.githubusercontent.com/4536776/271873967-53e24c32-e475-452e-88e0-4418e9ca315a.png)
 
 **Credits**
 
@@ -28,19 +34,19 @@ If you must have perfect audio, Intel may be a better choice.
 
 **Tested macOS**
 
-- OC90+ and Ventura 13.4+ is the only focus of current testing.
+- OC90+ and Ventura 13.6+ is the only focus of current testing.
 
 **Hardware**
 
-- Asus Prime B450M-II  works well in MacOS Ventura 13.4. It's safe to update, and all testing will only include 4002 BIOS (or later) going forward. Flash to 4002 (https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b450m-a-ii/helpdesk_bios/?model2Name=PRIME-B450M-A-II). After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable above 4G Decoding.  
+- Asus Prime B450M-II  works well in MacOS Ventura 13.6. It's safe to update, and all testing will only include 4204 BIOS (or later) going forward. Flash to 4024 (see above). After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable above 4G Decoding.  
 - Ryzen 5600X [If you use another Ryzen chip with a different number of cores, changes are required]
 - An AMD GPU is required regardless of which Ryzen CPU you use, no exceptions; ADGPMOD=PIKERA is in place for allowing any of the newer supported GPUs without issue.  The AMD580 and AMD5700 are directly tested.
   - Most typical, RX470, RX480, RX570, RX580, RX590, Vega 56, Vega 64, RX 5700, RX6600, RX6600XT, RX6800, RX6800XT, RX6900XT will all work. Some other variants (some RX560, for example) will work also, but you should google for more details before buying. 
-- 32GB RAM PC3600 [2 x 16GB DIMMs]
+- 64GB RAM PC3600 [2 x 32GB DIMMs]
 - 1TB NVME [HP EX920]
 - Generic EVGA 550W PSU
 - Phanteks Enthoo Evolv MATX Tempered Glass Case.
-- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom/Fenvi.  You'll need to map that port, depending on where you plug in the wireless/BT adapter.
+- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom/Fenvi.  You'll need to map that port, depending on where you plug in the wireless/BT adapter.  Note with Sonoma you'll probably want to flip to Intel BT/Wifi.  Haven't tried with this motherboard / cannot provide support.
 
 **Working**
 
@@ -102,8 +108,8 @@ Now let's fix your MAC address (ROM)
 
 **Benchmark Expectations**
 
-- Running 13.4 with BIOS 4002 and a Ryzen 5600X, and using PC3600 RAM, I get GeekBench 6.03 scores of 1953/8473 (single/multi-core).
-- A typical M2 base $499 mini (https://browser.geekbench.com/macs/mac-mini-2023-8c-cpu) is (Geekbench) 2623/9671, so the base 5600X is about 74% of the M2's speed per core, and about 88% of the M2 (mini) speed with all cores working.
+- Running 13.6 with BIOS 4204 and a Ryzen 5600X, and using PC3600 RAM, I get GeekBench 6.2 scores of 1958/9278 (single/multi-core).
+- A typical M2 base $499 mini (https://browser.geekbench.com/macs/mac-mini-2023-8c-cpu) is (Geekbench) 2629/9733, so the base 5600X is about 74% of the M2's speed per core, and about 95% of the M2 (mini) speed with all cores working.
 
 **Addendum: OC90+**
 
