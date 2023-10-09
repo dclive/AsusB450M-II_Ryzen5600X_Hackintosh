@@ -28,6 +28,10 @@ Same PC3600 RAM, but with BIOS 4204 Sept 4 2023 BIOS and PBO enabled:
 
 ![image](https://user-images.githubusercontent.com/4536776/271873967-53e24c32-e475-452e-88e0-4418e9ca315a.png)
 
+Same setup, but with Sonoma 14 and Geekbench 6.2.1.  I'll test a bit more with PBO and such.
+
+![image](https://user-images.githubusercontent.com/4536776/273487203-f87e0f70-448e-4047-a948-591eadda9ba0.png)
+
 **Credits**
 
 Most content was sourced from a variety of internet sources, coupled with the Dortania guide, plus https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#cleaning-up the AMD bits, and https://github.com/AMD-OSX/AMD_Vanilla for more AMD bits.  Note that the best AMD kernel patch I found was Shanee's, not Algrey's (see that second link...) - Algrey's gave me horrible GPU performance; Shanee's improved things, but at the cost of spotty audio (I survive...), whether over USB, DP, HDMI, or whathaveyou.  
