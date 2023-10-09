@@ -8,7 +8,7 @@ First Release - no major changes.  BIOS 4002 (2023/03/21) is used.
 
 Second Release - No EFI changes whatsoever (use OCAT to update to OC95 or later; see guide here:  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT); the only updates at this time (1-October-2023) are due to BIOS 4204 dated Sept 4 2023, found here:  https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b450m-a-ii/helpdesk_bios/?model2Name=PRIME-B450M-A-II).  I suggest updating to this BIOS, and enabling PBO for a mild performance boost, shown below in the GeekBench section.  OC95 is tested and working fine with 13.6.  Update your KEXTs using OCAT! 
 
-Third Release :  New 10/8/2023 EFI with very simple updates to permit the AMD patches (search algray in OCAT) to operate in the new v23+ kernel.  That's literally the only change.  And OC95.   [To be posted soon]
+Third Release :  New 10/8/2023 EFI with very simple updates to permit the AMD patches (search algray in OCAT) to operate in the new v23+ kernel.  That's literally the only change.  And OC95.   
 
 Sonoma MacOS 14 Statement:  Update to the 10.8.2023 EFI and Sonoma will install without issue.  I keep old graphics in here, but know that Sonoma is fine. 
 
