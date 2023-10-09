@@ -36,12 +36,12 @@ If you must have perfect audio, Intel may be a better choice.
 
 **Tested macOS**
 
-- OC95+ and Ventura 13.6+ is the only focus of current testing.  Sonoma MacOS 14.0 doesn't work at the moment for me.  
+- OC95+ and Ventura 14.0+ is the only focus of current testing.   
 
 **Hardware**
 
-- Asus Prime B450M-II  works well in MacOS Ventura 13.6. It's safe to update, and all testing will only include 4204 BIOS (or later) going forward. Flash to 4024 (see above). After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable above 4G Decoding.  
-- Ryzen 5600X [If you use another Ryzen chip with a different number of cores, changes are required]
+- Asus Prime B450M-II  works well in MacOS Ventura 14.0. It's safe to update, and all testing will only include 4204 BIOS (or later) going forward. Flash to 4024 (see above). After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable above 4G Decoding.  
+- Ryzen 5600X [If you use another Ryzen chip with a different number of cores, changes are required; see the AMD links above]
 - An AMD GPU is required regardless of which Ryzen CPU you use, no exceptions; ADGPMOD=PIKERA is in place for allowing any of the newer supported GPUs without issue.  The AMD580 and AMD5700 are directly tested.
   - Most typical, RX470, RX480, RX570, RX580, RX590, Vega 56, Vega 64, RX 5700, RX6600, RX6600XT, RX6800, RX6800XT, RX6900XT will all work. Some other variants (some RX560, for example) will work also, but you should google for more details before buying. 
 - 64GB RAM PC3600 [2 x 32GB DIMMs]
