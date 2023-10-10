@@ -1,6 +1,6 @@
 # AsusB450M-II_Ryzen5600X_Hackintosh
 
-***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC90, MacOS13.4\****
+***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC95, MacOS14\****
 
 *MAJOR CHANGES: *
 
@@ -8,9 +8,9 @@ First Release - no major changes.  BIOS 4002 (2023/03/21) is used.
 
 Second Release - No EFI changes whatsoever (use OCAT to update to OC95 or later; see guide here:  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT); the only updates at this time (1-October-2023) are due to BIOS 4204 dated Sept 4 2023, found here:  https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b450m-a-ii/helpdesk_bios/?model2Name=PRIME-B450M-A-II).  I suggest updating to this BIOS, and enabling PBO for a mild performance boost, shown below in the GeekBench section.  OC95 is tested and working fine with 13.6.  Update your KEXTs using OCAT! 
 
-Third Release :  New 10/8/2023 EFI with very simple updates to permit the AMD patches (search algray in OCAT) to operate in the new v23+ kernel.  That's literally the only change.  And OC95.   
+Third Release :  New 10/8/2023 EFI with very simple updates to permit the AMD patches (search algray in OCAT) to operate in the new v23+ kernel.  That's literally the only change.  And OC95 & associated KEXTs.   
 
-Sonoma MacOS 14 Statement:  Update to the 10.8.2023 EFI and Sonoma will install without issue.  I keep old graphics in here, but know that Sonoma is fine. 
+Sonoma MacOS 14 Statement:  Update to the 10.8.2023 EFI and Sonoma will install without issue.  I keep old graphics, below, in here, but know that Sonoma installs fine. 
 
 ![229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png (281×526)](https://user-images.githubusercontent.com/4536776/229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png)
 
@@ -73,7 +73,7 @@ If you must have perfect audio, Intel may be a better choice.
 
 You will need to do the following:
 
-- Prepare a USB boot disk for MacOS 13.x installation. The easiest way is on a real Mac, although gibMacOS may work for you as well. To follow the much easier Real Mac path, read https://support.apple.com/en-us/HT201372 and follow the directions for MacOS, including the terminal command to write the download to the USB stick. You'll want to format the USB as HFS+ format, GUID.  TINU also can make a bootable USB stick...
+- Prepare a USB boot disk for MacOS 14.x installation. The easiest way is on a real Mac, although gibMacOS may work for you as well. To follow the much easier Real Mac path, read https://support.apple.com/en-us/HT201372 and follow the directions for MacOS, including the terminal command to write the download to the USB stick. You'll want to format the USB as HFS+ format, GUID.  TINU also can make a bootable USB stick...
 - Download EFIAgent (https://github.com/headkaze/EFI-Agent) and mount the EFI (ESP) partition for the USB stick you just made. Using EFIAgent again, "open" the EFI partition so it shows on the Mac desktop. Note that EFI partitions are typically GRAY in color in EFIAgent. To find EFIAgent, locate the new icon in the upper right clock area that looks like a circular pie. [![Screen Shot 2021-09-25 at 7 22 44 PM](https://user-images.githubusercontent.com/4536776/134790066-27597b9e-a37f-47e0-87f5-d3ebbc2af59f.png)](https://user-images.githubusercontent.com/4536776/134790066-27597b9e-a37f-47e0-87f5-d3ebbc2af59f.png)
 
 > > Remember this process for any future EFI partitions you must mount; this is a common procedure.
@@ -114,9 +114,9 @@ Now let's fix your MAC address (ROM)
 
 **Benchmark Expectations**
 
-- Running 13.6 with BIOS 4204 and a Ryzen 5600X, and using PC3600 RAM, I get GeekBench 6.2 scores of 1958/9278 (single/multi-core).
-- A typical M2 base $499 mini (https://browser.geekbench.com/macs/mac-mini-2023-8c-cpu) is (Geekbench) 2629/9733, so the base 5600X is about 74% of the M2's speed per core, and about 95% of the M2 (mini) speed with all cores working.
+- Running 14.0 with BIOS 4204 and a Ryzen 5600X, and using PC3600 RAM, I get GeekBench 6.2 scores of 1912/8765 (single/multi-core).
+- A typical M2 base $499 mini (https://browser.geekbench.com/macs/mac-mini-2023-8c-cpu) is (Geekbench) 2630/9735, so the base 5600X is about 73% of the M2's speed per core, and about 90% of the M2 (mini) speed with all cores working.
 
-**Addendum: OC90+**
+**Addendum: OC95+**
 
-- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.  OC92 as of 5/2023 is fully working, and takes moments to update via OCAT.  See my OCAT procedure for full details.  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT
+- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.  OC95 as of 10/2023 is fully working, and takes moments to update via OCAT.  See my OCAT procedure for full details.  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT
