@@ -1,6 +1,6 @@
-# Asus B450M-A II Ryzen 5600X Hackintosh
+# Asus Prime B450M-A II Ryzen 5600X Hackintosh
 
-***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC95, MacOS14\****
+***\*Hackintosh EFI Information for Asus Prime B450M-A II with Ryzen 5600X - Fully working, OC95, MacOS14\****
 
 *MAJOR CHANGES: *
 
