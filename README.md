@@ -1,4 +1,4 @@
-# AsusB450M-II_Ryzen5600X_Hackintosh
+# Asus B450M-A II Ryzen 5600X Hackintosh
 
 ***\*Hackintosh EFI Information for Asus B450M-II with Ryzen 5600X - Fully working, OC95, MacOS14\****
 
