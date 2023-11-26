@@ -46,7 +46,7 @@ If you must have audio, Intel may be a better choice.
 
 **Hardware**
 
-- Asus Prime B450M-A II  works well in MacOS Ventura 14.0. It's safe to update, and all testing will only include 4204 BIOS (or later) going forward. Flash to 4024 (see above). After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable above 4G Decoding.  
+- Asus Prime B450M-A II  works well in MacOS Ventura 14.0. It's safe to update, and all testing will only include 4204 BIOS (or later) going forward. Flash to 4024 (see above). After Flash, load all BIOS defaults. Then disable GPU ReBar, disable serial, disable secure boot, disable fast boot, disable CSM.  Set XMP to on (if your RAM is capable).  Enable Above 4G Decoding.  
 - Ryzen 5600X [If you use another Ryzen chip with a different number of cores, changes are required; see the AMD links above]
 - An AMD GPU is required regardless of which Ryzen CPU you use, no exceptions; AGDPMOD=PIKERA is in place for allowing any of the newer supported GPUs without issue.  The AMD580 and AMD5700 are directly tested.
   - Most typical, RX470, RX480, RX570, RX580, RX590, Vega 56, Vega 64, RX 5700, RX6600, RX6600XT, RX6800, RX6800XT, RX6900XT will all work. Some other variants (some RX560, for example) will work also, but you should google for more details before buying. 
@@ -54,7 +54,7 @@ If you must have audio, Intel may be a better choice.
 - 1TB NVME [HP EX920]
 - Generic EVGA 550W PSU
 - Phanteks Enthoo Evolv MATX Tempered Glass Case.
-- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom/Fenvi.  You'll need to map that (USB) port, depending on where you plug in the wireless/BT adapter.  Yes, this means even when the BT/Wifi module is on an M2 slot in the motherboard, it still uses a USB "port" of the 15 permitted.  
+- I do not use wifi or bluetooth on this machine in any capacity; you're on your own.  I strongly suggest Broadcom/Fenvi.  You'll need to map that (USB) port, depending on where you plug in the wireless/BT adapter.  Yes, this means even when the BT/Wifi module is on an M2 slot in the motherboard, it still uses a USB "port" of the 15 permitted, type:internal.  
 
 **Working**
 
@@ -70,6 +70,7 @@ If you must have audio, Intel may be a better choice.
 **Not Working**
 
 - Anything using wifi / BT won't work (unless you add the hardware and the USB mapping); anything based on Intel QuickSync won't work.  I find emulation, like Fusion, won't work, nor will common photo apps, like Topaz Photo AI and Topaz Video AI; they simply quit.  I suspect it's due to the AMD Ryzen CPU, as these apps run fine on my Intel CPU Hacks.  
+- Again, audio is quite poor / delayed / etc. via HDMI/DP.  
 
 **Next Steps - Required**
 
@@ -108,8 +109,7 @@ Now let's fix your MAC address (ROM)
 
 - Assuming no other issues, your setup is now complete!
 - Restart, press DEL at the Asus boot screen, go into BIOS, choose a boot disk, and boot from the USB stick (select the uEFI option if prompted). You'll then be able to step through installation of MacOS. You'll need to format your SSD as APFS or HFS+ (APFS is the new one; use that). Name the newly formatted SSD something like **MacSSD** so you know that's what you'll boot from in the future. Then you can start setup.
-- Once setup is done, use EFIAgent or OCAT to copy the USB stick's EFI folder, with your serial number modifications, to the SSD's EPS (EFI) partition, and then you'll be able to boot from that disk (and you won't need the USB stick anymore, but keep it forever as a backup!). Do note: Until you've copied the EFI folder from your USB stick to your SSD's EPS (EFI) partition, you must continue to use DEL to boot into your USB stick before booting into MacOS. Once you've copied the USB stick's EFI folder to the EPS (EFI) partition on the SSD, then you'll no longer need to use the USB stick to boot, and you'll just boot from the SSD's EPS (EFI).
-- Versioning on this zipfile is OC90. Future versions, if required, would have higher numbers so it is easier to see what version you have. Keep the zipfile (name, at least) around so you know what version you have.
+- Once setup is done, use EFIAgent or OCAT to copy the USB stick's EFI folder, with your serial number modifications, to the SSD's EPS (EFI) partition, and then you'll be able to boot from that disk (and you won't need the USB stick anymore, but keep it forever as a backup!). **Do note: Until you've copied the EFI folder from your USB stick to your SSD's EPS (EFI) partition, you must continue to use DEL to boot into your USB stick before booting into MacOS. Once you've copied the USB stick's EFI folder to the EPS (EFI) partition on the SSD, then you'll no longer need to use the USB stick to boot, and you'll just boot from the SSD's EPS (EFI).**
 - You can clean up logs and logging / bootup, if you wish, once you have everything sorted. Doritania's guide has a post-install cleanup section with good details on that. In the zip, logging is fully enabled, so that if there's a problem you can take a video of the screen on your phone and troubleshoot based on that.
 - **Use OCAuxiliaryTools to update to later OpenCore releases**. Use MacOS's built-in update mechanism to update MacOS releases.  But note that for now, with this build, Sonoma MacOS 14 doesn't install for me.
 - Otherwise, please leave comments/issues here.
@@ -118,6 +118,7 @@ Now let's fix your MAC address (ROM)
 
 - Running 14.0 with BIOS 4204 and a Ryzen 5600X, and using PC3600 RAM, I get GeekBench 6.2 scores of 1912/8765 (single/multi-core).
 - A typical M2 base $499 mini (https://browser.geekbench.com/macs/mac-mini-2023-8c-cpu) is (Geekbench) 2630/9735, so the base 5600X is about 73% of the M2's speed per core, and about 90% of the M2 (mini) speed with all cores working.
+- Compared to the Macbook Pro M3 Pro (14" MBP 2023 base model) at 3078/14019, the Ryzen 5600X has about 62% of the per core performance, and about 63% of the all-core performance.  
 
 **Addendum: OC95+**
 
