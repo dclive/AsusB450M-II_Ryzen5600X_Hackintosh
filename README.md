@@ -12,6 +12,8 @@ Second Release - No EFI changes whatsoever (use OCAT to update to OC95 or later;
 
 Third Release :  New 10/8/2023 EFI with very simple updates to permit the AMD patches (search algray in OCAT) to operate in the new v23+ kernel.  That's literally the only change.  And OC95 & associated KEXTs.   
 
+Dec 16 2023:  Brief comment: OpenCorn .97 works fine, but as I've a failing HP EX920 drive, it's likely updates will become infrequent.   
+
 Sonoma MacOS 14 Statement:  Update to the 10.8.2023 EFI and Sonoma will install without issue.  I keep old graphics, below, in here, but know that Sonoma installs fine. 
 
 ![229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png (281×526)](https://user-images.githubusercontent.com/4536776/229230925-1fc9cda2-0da5-46b3-ac8e-f40596f496f1.png)
@@ -122,4 +124,4 @@ Now let's fix your MAC address (ROM)
 
 **Addendum: OC95+**
 
-- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.  OC95 as of 10/2023 is fully working, and takes moments to update via OCAT.  See my OCAT procedure for full details.  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT
+- Use OCAT to update. No issues to report. DO THIS. It's worth staying current and fully fixed.  OC97 as of 12/2023 is fully working, and takes moments to update via OCAT.  See my OCAT procedure for full details.  https://github.com/dclive/Howto--Update-OpenCore-with-OCAT
