@@ -5,6 +5,7 @@
 *MAJOR CHANGES: *
 
 11/26/2023:  Replaced with Apple Silicon.  Updates will now be infrequent. 
+1/18/2023:  Now given away.  Updates will cease.  Will keep up for the community for a bit. 
 
 First Release - no major changes.  BIOS 4002 (2023/03/21) is used.  
 
