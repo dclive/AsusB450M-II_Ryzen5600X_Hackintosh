@@ -5,7 +5,7 @@
 *MAJOR CHANGES: *
 
 11/26/2023:  Replaced with Apple Silicon.  Updates will now be infrequent. 
-1/18/2023:  Now given away.  Updates will cease.  Will keep up for the community for a bit. 
+1/18/2024:  Now given away.  Updates will cease.  Will keep up for the community for a bit. 
 
 First Release - no major changes.  BIOS 4002 (2023/03/21) is used.  
 
@@ -13,7 +13,7 @@ Second Release - No EFI changes whatsoever (use OCAT to update to OC95 or later;
 
 Third Release :  New 10/8/2023 EFI with very simple updates to permit the AMD patches (search algray in OCAT) to operate in the new v23+ kernel.  That's literally the only change.  And OC95 & associated KEXTs.   
 
-Dec 16 2023:  Brief comment: OpenCorn .97 works fine, but as I've a failing HP EX920 drive, it's likely updates will become infrequent.   
+Dec 16 2023:  Brief comment: OpenCore .97 works fine, but as I've a failing HP EX920 drive, it's likely updates will become infrequent.   
 
 Sonoma MacOS 14 Statement:  Update to the 10.8.2023 EFI and Sonoma will install without issue.  I keep old graphics, below, in here, but know that Sonoma installs fine. 
 
@@ -114,7 +114,7 @@ Now let's fix your MAC address (ROM)
 - Restart, press DEL at the Asus boot screen, go into BIOS, choose a boot disk, and boot from the USB stick (select the uEFI option if prompted). You'll then be able to step through installation of MacOS. You'll need to format your SSD as APFS or HFS+ (APFS is the new one; use that). Name the newly formatted SSD something like **MacSSD** so you know that's what you'll boot from in the future. Then you can start setup.
 - Once setup is done, use EFIAgent or OCAT to copy the USB stick's EFI folder, with your serial number modifications, to the SSD's EPS (EFI) partition, and then you'll be able to boot from that disk (and you won't need the USB stick anymore, but keep it forever as a backup!). **Do note: Until you've copied the EFI folder from your USB stick to your SSD's EPS (EFI) partition, you must continue to use DEL to boot into your USB stick before booting into MacOS. Once you've copied the USB stick's EFI folder to the EPS (EFI) partition on the SSD, then you'll no longer need to use the USB stick to boot, and you'll just boot from the SSD's EPS (EFI).**
 - You can clean up logs and logging / bootup, if you wish, once you have everything sorted. Doritania's guide has a post-install cleanup section with good details on that. In the zip, logging is fully enabled, so that if there's a problem you can take a video of the screen on your phone and troubleshoot based on that.
-- **Use OCAuxiliaryTools to update to later OpenCore releases**. Use MacOS's built-in update mechanism to update MacOS releases.  But note that for now, with this build, Sonoma MacOS 14 doesn't install for me.
+- **Use OCAuxiliaryTools to update to later OpenCore releases**. Use MacOS's built-in update mechanism to update MacOS releases.  But note that for now, with this build, Sonoma MacOS 14 doesn't install for me (Edit:  With the 10.8.23 EFI, this is now fixed).
 - Otherwise, please leave comments/issues here.
 
 **Benchmark Expectations**
